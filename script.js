@@ -1,6 +1,6 @@
 $('document').ready(function(){
     let arr = Array.from({length : 40}, (_, v) => v + 1)
-
+    console.log(arr);
     const shuffleArray = arr => {
         for (let i = arr.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -10,10 +10,12 @@ $('document').ready(function(){
         }
     }
 
-    shuffleArray(arr);
-
-    arr.slice(0,32).forEach(function(val,idx){
+    // shuffleArray(arr);
+    console.log(arr);
+    arr.slice(1,40).forEach(function(val,idx){
         var id = "#q" + val.toString();
-        $(id).remove(); 
+        // var id = "#q1"
+        $(id).remove();
     });
+    console.log(arr);
 })
