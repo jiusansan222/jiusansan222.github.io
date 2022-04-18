@@ -10,9 +10,9 @@ $('document').ready(function(){
         }
     }
 
-    // shuffleArray(arr);
+    shuffleArray(arr);
     console.log(arr);
-    arr.slice(1,40).forEach(function(val,idx){
+    arr.slice(0,39).forEach(function(val,idx){
         var id = "#q" + val.toString();
         // var id = "#q1"
         $(id).remove();

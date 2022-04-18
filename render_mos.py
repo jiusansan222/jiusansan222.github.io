@@ -15,7 +15,7 @@ def main():
     html = template.render(
         page_title="MOS Experiment Form 1",
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url="https://script.google.com/macros/s/AKfycbyGr8OP7-Kv4Gu9zRJccpo4k-0iKu2h6bCc_-Qs2dGOC8Qw8iwq_vbDlDQwLIuqTiSi/exec",
+        form_url="https://script.google.com/macros/s/AKfycbytBmIw9zSCvEufanIET9rYApsKPH7KrUglZUb12rs/dev",
         form_id=1,
         questions=[{
                     "title" : "Question " + str(i),
