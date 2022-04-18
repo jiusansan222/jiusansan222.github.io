@@ -5,6 +5,7 @@ from jinja2 import FileSystemLoader, Environment
 
 NUM = 40
 
+
 def main():
     """Main function."""
     loader = FileSystemLoader(searchpath="./templates")
@@ -13,7 +14,8 @@ def main():
 
     html = template.render(
         page_title="MOS Experiment Form 1",
-        form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
+        # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
+        form_url="https://script.google.com/macros/s/AKfycbzL0HgMRsYbiw6eKWdJYTLh2a3AItftkvqB3oMd0X9-isG6_Dohs5divpj613Zxcms/exec",
         form_id=1,
         questions=[{
                     "title" : "Question " + str(i),
