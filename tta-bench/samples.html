@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELM - 音频样本展示</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="samples.css">
+    <script src="nav.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>音频样本展示</h1>
+        <p class="samples-description">以下是各种文本到音频模型生成的样本，您可以比较不同模型的音频质量和文本对齐程度。</p>
+
+        <div class="samples-container">
+            <table class="samples-table">
+                <thead>
+                    <tr>
+                        <th>模型 / 提示</th>
+                        <th>钢琴独奏，舒缓的旋律，带有轻微的回声</th>
+                        <th>雨天的环境声，雷声和雨滴落在屋顶上</th>
+                        <th>电子舞曲，强劲的节拍和合成器</th>
+                        <th>鸟鸣声和森林环境音效</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="model-name">AudioLM</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiolm_piano.mp3"></audio>
+                                <div class="rating">评分: 9.2/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiolm_rain.mp3"></audio>
+                                <div class="rating">评分: 8.9/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiolm_edm.mp3"></audio>
+                                <div class="rating">评分: 8.6/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiolm_birds.mp3"></audio>
+                                <div class="rating">评分: 9.4/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">MusicLM</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musiclm_piano.mp3"></audio>
+                                <div class="rating">评分: 8.7/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musiclm_rain.mp3"></audio>
+                                <div class="rating">评分: 8.5/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musiclm_edm.mp3"></audio>
+                                <div class="rating">评分: 9.3/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musiclm_birds.mp3"></audio>
+                                <div class="rating">评分: 8.1/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">AudioGen</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiogen_piano.mp3"></audio>
+                                <div class="rating">评分: 7.9/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiogen_rain.mp3"></audio>
+                                <div class="rating">评分: 9.1/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiogen_edm.mp3"></audio>
+                                <div class="rating">评分: 8.2/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/audiogen_birds.mp3"></audio>
+                                <div class="rating">评分: 9.0/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">Bark</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/bark_piano.mp3"></audio>
+                                <div class="rating">评分: 8.3/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/bark_rain.mp3"></audio>
+                                <div class="rating">评分: 8.8/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/bark_edm.mp3"></audio>
+                                <div class="rating">评分: 7.8/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/bark_birds.mp3"></audio>
+                                <div class="rating">评分: 8.7/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">MusicGen</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musicgen_piano.mp3"></audio>
+                                <div class="rating">评分: 8.8/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musicgen_rain.mp3"></audio>
+                                <div class="rating">评分: 8.9/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musicgen_edm.mp3"></audio>
+                                <div class="rating">评分: 8.4/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/musicgen_birds.mp3"></audio>
+                                <div class="rating">评分: 8.8/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">Voicebox</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/voicebox_piano.mp3"></audio>
+                                <div class="rating">评分: 7.6/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/voicebox_rain.mp3"></audio>
+                                <div class="rating">评分: 8.4/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/voicebox_edm.mp3"></audio>
+                                <div class="rating">评分: 7.9/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/voicebox_birds.mp3"></audio>
+                                <div class="rating">评分: 8.5/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">VALL-E</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/valle_piano.mp3"></audio>
+                                <div class="rating">评分: 8.1/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/valle_rain.mp3"></audio>
+                                <div class="rating">评分: 8.7/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/valle_edm.mp3"></audio>
+                                <div class="rating">评分: 8.3/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/valle_birds.mp3"></audio>
+                                <div class="rating">评分: 8.9/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="model-name">Jukebox</td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/jukebox_piano.mp3"></audio>
+                                <div class="rating">评分: 7.5/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/jukebox_rain.mp3"></audio>
+                                <div class="rating">评分: 8.6/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/jukebox_edm.mp3"></audio>
+                                <div class="rating">评分: 8.1/10</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="audio-player">
+                                <audio controls src="samples/jukebox_birds.mp3"></audio>
+                                <div class="rating">评分: 8.6/10</div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="samples-info">
+            <p>所有音频样本均由各模型使用相同的文本提示生成，未经任何后期处理。</p>
+            <p>评分基于专业音频工程师和音乐制作人的综合评估，考虑音质、文本对齐度和创意表现。</p>
+            <p>最后更新: 2023年12月20日</p>
+        </div>
+    </div>
+
+    <script src="samples.js"></script>
+</body>
+
+</html>

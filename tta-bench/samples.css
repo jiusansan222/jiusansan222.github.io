@@ -1,0 +1,105 @@
+/* 音频样本页面专用样式 */
+.samples-container {
+    max-width: 100%;
+    margin: 10px auto;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.samples-description {
+    max-width: 90%;
+    margin: 0 auto 30px;
+    color: #666;
+    font-size: 18px;
+}
+
+.samples-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+.samples-table th,
+.samples-table td {
+    padding: 8px 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.samples-table th {
+    background-color: #0047AB;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    position: sticky;
+    top: 0;
+}
+
+.samples-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.prompt-text {
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+    max-width: 200px;
+}
+
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.audio-player audio {
+    width: 100%;
+    max-width: 150px;
+}
+
+.rating {
+    font-size: 14px;
+    color: #0047AB;
+    font-weight: 500;
+}
+
+.samples-info {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+}
+
+.samples-info p {
+    margin: 8px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+
+    .samples-table th,
+    .samples-table td {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
+    .audio-player audio {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+}

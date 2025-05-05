@@ -1,0 +1,92 @@
+/* 模型信息表格样式 */
+.models-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.models-table th,
+.models-table td {
+    border: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.models-table th {
+    background-color: #1a73e8;
+    /* 蓝色标题背景 */
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.models-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.models-table tr:hover {
+    background-color: #e8f0fe;
+    /* 蓝色悬停效果 */
+}
+
+.models-table td:first-child {
+    font-weight: 500;
+    color: #d32f2f;
+    /* 红色模型名称 */
+}
+
+/* 模型信息部分样式 */
+.models-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.models-info {
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+.models-info h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #1a73e8;
+    /* 蓝色标题 */
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    font-weight: 500;
+}
+
+.models-info ul {
+    margin-left: 20px;
+    padding-left: 15px;
+    list-style-type: square;
+}
+
+.models-info li {
+    margin-bottom: 10px;
+}
+
+.models-info strong {
+    color: #d32f2f;
+    /* 红色强调 */
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .models-table {
+        font-size: 14px;
+    }
+
+    .models-table th,
+    .models-table td {
+        padding: 8px 10px;
+    }
+}

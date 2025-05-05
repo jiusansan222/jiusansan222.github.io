@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELM - 文本到图像模型的全面评估</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="nav.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <div class="big-logo">
+            <img src="image/logo.png" alt="Logo">
+        </div>
+        <h1>A Comprehensive <strong id="benchmark-text">Benchmark</strong> for Evaluating<span>Text-to-Audio
+                Models</span>
+        </h1>
+
+        <div class="buttons">
+            <a href="#" class="btn">PAPER</a>
+            <a href="#" class="btn">GITHUB</a>
+            <a href="#" class="btn">DATASET</a>
+        </div>
+
+        <div class="description">
+            <p>Significant effort has recently been made in developing text-to-image generation models, which take
+                textual prompts as input and generate images. As these models are widely used in real-world
+                applications, there is an urgent need to comprehensively understand their capabilities and risks.
+                However, existing evaluations primarily focus on image-text alignment and image quality. To address this
+                limitation, we introduce a new benchmark, <strong>Holistic Evaluation of Text-To-Image Models
+                    (HEIM)</strong>.</p>
+
+            <p>We identify 12 different aspects that are important in real-world model deployment, including:</p>
+        </div>
+
+        <ul class="features">
+            <li>image-text alignment</li>
+            <li>image quality</li>
+            <li>aesthetics</li>
+            <li>originality</li>
+            <li>reasoning</li>
+            <li>knowledge</li>
+            <li>bias</li>
+            <li>toxicity</li>
+            <li>fairness</li>
+            <li>robustness</li>
+            <li>multilinguality</li>
+            <li>efficiency</li>
+        </ul>
+
+        <div class="description">
+            <p>By curating scenarios encompassing these aspects, we evaluate state-of-the-art text-to-image models using
+                this benchmark. Unlike previous evaluations that focused on alignment and quality, HEIM significantly
+                improves coverage by evaluating all models across all aspects. Our results reveal that no single model
+                excels in all aspects, with different models demonstrating strengths in different aspects.</p>
+
+            <p>For full transparency, this website contains all the prompts, generated images and the results for the
+                automated and human evaluation metrics.</p>
+
+            <p>Inspired by HELM, we decompose the model evaluation into four key components: aspect, scenario,
+                adaptation, and metric:</p>
+        </div>
+
+        <div style="text-align: center;">
+            <img src="image/test.jpg" alt="Test Image">
+        </div>
+
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-group">
+                    <h2>29 models</h2>
+                    <ul>
+                        <li>Aleph Alpha / MultiFusion (13B)</li>
+                        <li>Adobe / GigaGAN (1B)</li>
+                        <li>OpenAI / DALL-E 2 (3.5B)</li>
+                        <li>Lexica / Lexica Search with Stable Diffusion v1.5 (1B)</li>
+                        <li>DeepFloyd / DeepFloyd IF Medium (0.4B)</li>
+                        <li>DeepFloyd / DeepFloyd IF Large (0.9B)</li>
+                        <li>DeepFloyd / DeepFloyd IF X-Large (4.3B)</li>
+                        <li>Kakao Brain / minDALL-E (1.3B)</li>
+                        <li>Craiyon / DALL-E mini (0.4B)</li>
+                        <li>Craiyon / DALL-E mega (2.6B)</li>
+                        <li>Tsinghua / CogView2 (6B)</li>
+                        <li>dreamlike.art / Dreamlike Photoreal v2.0 (1B)</li>
+                        <li>dreamlike.art / Dreamlike Diffusion v1.0 (1B)</li>
+                        <li>PromptHero / Openjourney v1 (1B)</li>
+                        <li>PromptHero / Openjourney v2 (1B)</li>
+                        <li>nitrosocke / Redshift Diffusion (1B)</li>
+                    </ul>
+                </div>
+
+                <div class="stat-group">
+                    <h2>29 scenarios</h2>
+                    <ul>
+                        <li>MS-COCO (base)</li>
+                        <li>MS-COCO Fidelity</li>
+                        <li>MS-COCO Efficiency</li>
+                        <li>MS-COCO (fairness - gender)</li>
+                        <li>MS-COCO (fairness - AAVE dialect)</li>
+                        <li>MS-COCO (robustness)</li>
+                        <li>MS-COCO (Chinese)</li>
+                        <li>MS-COCO (Hindi)</li>
+                        <li>MS-COCO (Spanish)</li>
+                        <li>MS-COCO (Art styles)</li>
+                        <li>Caltech-UCSD Birds-200-2011</li>
+                        <li>DrawBench (image quality categories)</li>
+                        <li>PartiPrompts (image quality categories)</li>
+                        <li>dailydall.e</li>
+                        <li>Landing Page</li>
+                        <li>Logos</li>
+                        <li>Magazine Cover Photos</li>
+                    </ul>
+                </div>
+
+                <div class="stat-group">
+                    <h2>33 metrics</h2>
+                    <span>Efficiency</span>
+                    <ul>
+                        <li>Denoised inference runtime (s)</li>
+                    </ul>
+                    <span>Efficiency</span>
+                    <ul>
+                        <li>Inference runtime (in seconds)</li>
+                        <li>Idealized inference runtime (s)</li>
+                        <li>Denoised inference runtime (s)</li>
+                        <li>Estimated training emissions (kg CO2)</li>
+                        <li>Estimated training energy cost (MWh)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
