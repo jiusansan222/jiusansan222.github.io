@@ -9,10 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
             text: 'Leaderboard 🏆',
             link: 'leaderboard.html',
             dropdown: [
-                { text: 'Text-to-Image Models', link: 'leaderboard.html' },
-                { text: 'Text-to-Audio Models', link: 'leaderboard_bias.html' },
-                { text: 'Text-to-Video Models', link: '#' },
-                { text: 'Text-to-3D Models', link: '#' }
+                { text: 'Accuracy Leaderboard', link: 'leaderboard.html' },
+                { text: 'Generalization Leaderboard', link: 'leaderboard_generalization.html' },
+                { text: 'Efficiency Leaderboard', link: 'leaderboard_efficiency.html' },
+                { text: 'Robustness Leaderboard', link: 'leaderboard_robustness.html' },
+                { text: 'Bias Leaderboard', link: 'leaderboard_bias.html' },
+                { text: 'Fairness Leaderboard', link: 'leaderboard_fairness.html' },
+                { text: 'Toxicity Leaderboard', link: 'leaderboard_toxicity.html' }
+
             ]
         },
         {

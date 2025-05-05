@@ -99,3 +99,10 @@
         font-size: 32px;
     }
 }
+
+.no-wrap {
+    white-space: nowrap;
+    display: block;
+    width: 100%;
+    font-size: min(6vw, 48px);
+}

@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="leaderboard.css">
     <script src="nav.js"></script>
+    <style>
+        .no-wrap {
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            font-size: min(6vw, 48px);
+        }
+
+        .nowrap-blue {
+            color: blue;
+            white-space: nowrap;
+        }
+
+        #accuracy-text {
+            color: #eb5d50;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,7 +38,9 @@
     </header>
 
     <div class="main-content">
-        <h1>Text-to-Image Models Leaderboard</h1>
+        <h1 class="no-wrap">
+            Text-to-Audio Models <strong id="accuracy-text">Accuracy</strong> Leaderboard
+        </h1>
 
         <div class="leaderboard-container">
             <table class="leaderboard-table">
@@ -29,77 +49,77 @@
                         <th>Rank</th>
                         <th>Model Name</th>
                         <th>Overall Score</th>
-                        <th>Image Quality</th>
+                        <th>Quality</th>
                         <th>Text Alignment</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>OpenAI / DALL-E 3</td>
+                        <td>AudioGen</td>
                         <td>92.5</td>
                         <td>94.3</td>
                         <td>90.8</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Anthropic / Claude Vision</td>
+                        <td>AudioLDM</td>
                         <td>89.7</td>
                         <td>91.2</td>
                         <td>88.3</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>Google / Imagen 2</td>
+                        <td>AudioLDM 2</td>
                         <td>88.4</td>
                         <td>90.1</td>
                         <td>86.7</td>
                     </tr>
                     <tr>
                         <td>4</td>
-                        <td>Stability AI / Stable Diffusion XL</td>
+                        <td>Auffusion</td>
                         <td>85.9</td>
                         <td>87.6</td>
                         <td>84.2</td>
                     </tr>
                     <tr>
                         <td>5</td>
-                        <td>Midjourney v6</td>
+                        <td>MAGNeT</td>
                         <td>84.3</td>
                         <td>89.5</td>
                         <td>79.1</td>
                     </tr>
                     <tr>
                         <td>6</td>
-                        <td>Adobe / Firefly 2</td>
+                        <td>Make-An-Audio</td>
                         <td>82.7</td>
                         <td>85.3</td>
                         <td>80.1</td>
                     </tr>
                     <tr>
                         <td>7</td>
-                        <td>DeepFloyd / IF X-Large</td>
+                        <td>Make-An-Audio2</td>
                         <td>79.8</td>
                         <td>81.4</td>
                         <td>78.2</td>
                     </tr>
                     <tr>
                         <td>8</td>
-                        <td>RunwayML / Gen-2</td>
+                        <td>Stable-Audio</td>
                         <td>78.5</td>
                         <td>80.9</td>
                         <td>76.1</td>
                     </tr>
                     <tr>
                         <td>9</td>
-                        <td>Meta / Emu</td>
+                        <td>AudioLDM 2</td>
                         <td>76.2</td>
                         <td>78.5</td>
                         <td>73.9</td>
                     </tr>
                     <tr>
                         <td>10</td>
-                        <td>Aleph Alpha / MultiFusion</td>
+                        <td>Tango</td>
                         <td>74.8</td>
                         <td>76.3</td>
                         <td>73.3</td>
@@ -109,10 +129,10 @@
         </div>
 
         <div class="leaderboard-info">
-            <p>This leaderboard is based on the HELM evaluation framework, comprehensively considering image quality,
-                text alignment, creativity, diversity, and other dimensions.</p>
+            <p>This leaderboard is based on the TTA-Bench evaluation framework, comprehensively considering accuracy,
+                generalization, efficiency, bias, fairness, toxicity, and robustness.</p>
             <p>Scoring range: 0-100, with higher scores indicating better performance.</p>
-            <p>Last updated: December 15, 2023</p>
+            <p>Last updated: May 5, 2025</p>
         </div>
     </div>
 </body>

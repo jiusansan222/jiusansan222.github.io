@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELM - 文本到图像模型的全面评估</title>
+    <title>TTA-Bench - comprehensive benchmark for text-to-audio models</title>
     <link rel="stylesheet" href="styles.css">
     <script src="nav.js"></script>
 </head>
@@ -33,29 +33,34 @@
         </div>
 
         <div class="description">
-            <p>Significant effort has recently been made in developing text-to-image generation models, which take
-                textual prompts as input and generate images. As these models are widely used in real-world
-                applications, there is an urgent need to comprehensively understand their capabilities and risks.
-                However, existing evaluations primarily focus on image-text alignment and image quality. To address this
-                limitation, we introduce a new benchmark, <strong>Holistic Evaluation of Text-To-Image Models
-                    (HEIM)</strong>.</p>
+            <p style="color: #2c3e50; font-size: 1.1em;">Text-to-Audio (TTA) generation has made <span
+                    style="font-weight: bold;">significant strides</span> with the rise of large-scale generative
+                models.
+                However, existing evaluation methods for TTA systems are often <span
+                    style="font-weight: bold;">fragmented</span>, covering only limited aspects of model performance and
+                relying heavily on manual assessment. To address this, we propose <span
+                    style="font-weight: bold;">AudioEval</span>, a comprehensive and standardized benchmark designed to
+                systematically evaluate TTA models across multiple dimensions including <span
+                    style="font-weight: bold;">accuracy</span>, <span style="font-weight: bold;">generalization</span>,
+                <span style="font-weight: bold;">efficiency</span>, <span style="font-weight: bold;">reliability</span>,
+                and
+                <span style="font-weight: bold;">fairness</span>. AudioEval encompasses ten state-of-the-art TTA models,
+                combining large-scale automatic evaluation metrics with human annotations to ensure robustness and
+                reproducibility. Our experimental results demonstrate that AudioEval effectively differentiates model
+                capabilities at various granularities and provides actionable insights for improving TTA systems.
+            </p>
 
-            <p>We identify 12 different aspects that are important in real-world model deployment, including:</p>
+            <p>We identify 5 different aspects that are important in real-world model deployment, including:</p>
         </div>
 
         <ul class="features">
-            <li>image-text alignment</li>
-            <li>image quality</li>
-            <li>aesthetics</li>
-            <li>originality</li>
-            <li>reasoning</li>
-            <li>knowledge</li>
-            <li>bias</li>
-            <li>toxicity</li>
-            <li>fairness</li>
-            <li>robustness</li>
-            <li>multilinguality</li>
+            <li>accuracy</li>
+            <li>generalization</li>
             <li>efficiency</li>
+            <li>bias</li>
+            <li>fairness</li>
+            <li>toxicity</li>
+            <li>robustness</li>
         </ul>
 
         <div class="description">
@@ -64,7 +69,7 @@
                 improves coverage by evaluating all models across all aspects. Our results reveal that no single model
                 excels in all aspects, with different models demonstrating strengths in different aspects.</p>
 
-            <p>For full transparency, this website contains all the prompts, generated images and the results for the
+            <p>For full transparency, this website contains all the prompts, generated audios and the results for the
                 automated and human evaluation metrics.</p>
 
             <p>Inspired by HELM, we decompose the model evaluation into four key components: aspect, scenario,
@@ -78,24 +83,18 @@
         <div class="stats-section">
             <div class="stats-grid">
                 <div class="stat-group">
-                    <h2>29 models</h2>
+                    <h2>10 models</h2>
                     <ul>
-                        <li>Aleph Alpha / MultiFusion (13B)</li>
-                        <li>Adobe / GigaGAN (1B)</li>
-                        <li>OpenAI / DALL-E 2 (3.5B)</li>
-                        <li>Lexica / Lexica Search with Stable Diffusion v1.5 (1B)</li>
-                        <li>DeepFloyd / DeepFloyd IF Medium (0.4B)</li>
-                        <li>DeepFloyd / DeepFloyd IF Large (0.9B)</li>
-                        <li>DeepFloyd / DeepFloyd IF X-Large (4.3B)</li>
-                        <li>Kakao Brain / minDALL-E (1.3B)</li>
-                        <li>Craiyon / DALL-E mini (0.4B)</li>
-                        <li>Craiyon / DALL-E mega (2.6B)</li>
-                        <li>Tsinghua / CogView2 (6B)</li>
-                        <li>dreamlike.art / Dreamlike Photoreal v2.0 (1B)</li>
-                        <li>dreamlike.art / Dreamlike Diffusion v1.0 (1B)</li>
-                        <li>PromptHero / Openjourney v1 (1B)</li>
-                        <li>PromptHero / Openjourney v2 (1B)</li>
-                        <li>nitrosocke / Redshift Diffusion (1B)</li>
+                        <li>AudioGen</li>
+                        <li>AudioLDM</li>
+                        <li>AudioLDM 2</li>
+                        <li>Auffusion</li>
+                        <li>MAGNeT</li>
+                        <li>Make-An-Audio</li>
+                        <li>Make-An-Audio2</li>
+                        <li>Stable-Audio</li>
+                        <li>Tango</li>
+                        <li>Tango2</li>
                     </ul>
                 </div>
 
