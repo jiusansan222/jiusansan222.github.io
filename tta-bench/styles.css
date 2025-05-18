@@ -332,14 +332,6 @@ div[style="text-align: center;"] img {
     content: none !important;
 }
 
-.stat-group ul {
-    /* counter-reset: item; */
-}
-
-.stat-group li {
-    /* counter-increment: item; */
-}
-
 @media (max-width: 900px) {
     .stats-section {
         max-width: 100%;
