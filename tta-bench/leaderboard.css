@@ -31,11 +31,11 @@
 }
 
 .leaderboard-table tbody tr:hover {
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .leaderboard-table tbody tr:nth-child(1) {
-    background-color: #fff9e6;
+    background-color: white;
 }
 
 .leaderboard-table tbody tr:nth-child(1) td:first-child {
@@ -43,7 +43,7 @@
 }
 
 .leaderboard-table tbody tr:nth-child(1) td:first-child::after {
-    content: "🥇";
+    content: "";
     position: absolute;
     top: 50%;
     right: 10px;
@@ -51,7 +51,7 @@
 }
 
 .leaderboard-table tbody tr:nth-child(2) td:first-child::after {
-    content: "🥈";
+    content: "";
     position: absolute;
     top: 50%;
     right: 10px;
@@ -59,7 +59,7 @@
 }
 
 .leaderboard-table tbody tr:nth-child(3) td:first-child::after {
-    content: "🥉";
+    content: "";
     position: absolute;
     top: 50%;
     right: 10px;

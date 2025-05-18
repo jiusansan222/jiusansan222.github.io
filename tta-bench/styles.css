@@ -151,7 +151,7 @@ ul.features {
     max-width: 900px;
     margin: 0 auto 40px;
     padding: 30px;
-    background: white;
+    background: rgba(182, 200, 244, 0.144);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -179,12 +179,12 @@ ul.features {
 }
 
 .stats-section {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 60px auto;
-    padding: 40px 20px;
-    /* background: white; */
-    border-radius: 0px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); */
+    padding: 32px 16px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 /* 图片容器样式 */
@@ -263,21 +263,26 @@ div[style="text-align: center;"] img {
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
 }
 
 .stat-group {
+    flex: 1 1 320px;
+    max-width: 420px;
+    min-width: 260px;
+    box-sizing: border-box;
+    margin: 0 auto;
     text-align: left;
-    padding: 25px;
+    padding: 28px 22px;
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid #eee;
     transition: all 0.3s ease;
-    height: 100%;
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -290,95 +295,84 @@ div[style="text-align: center;"] img {
 }
 
 .stat-group h2 {
-    font-family: "Microsoft YaHei", "微软雅黑", sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: #0047AB;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #eee;
-    position: relative;
-}
-
-.stat-group h2::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 60px;
-    height: 2px;
-    background: #0047AB;
+    font-size: 22px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
 }
 
 .stat-group span {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    color: #666;
-    margin: 20px 0 10px;
+    margin: 16px 0 8px;
+    font-size: 15px;
 }
 
 .stat-group ul {
+    padding-left: 18px;
+    margin: 0 0 10px 0;
+}
+
+.stat-group li {
+    font-size: 15px;
+    margin-bottom: 7px;
     padding-left: 20px;
-    margin: 0;
-    list-style-position: outside;
-    list-style-type: none;
-    flex: 1;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
     width: 100%;
 }
 
-.stat-group li {
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #444444;
-    position: relative;
-    padding-left: 25px;
-    line-height: 1.6;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: calc(100% - 25px);
-}
+/* 去除 stat-group 列表项前的序号和图标 */
+/* 移除 ::before 伪元素和计数器相关样式 */
+/* .stat-group li::before, .stat-group.models li::before, .stat-group.scenarios li::before, .stat-group.metrics li::before { display: none !important; } */
 
-.stat-group li::before {
-    content: counter(item) ".";
-    color: #0047AB;
-    font-weight: 600;
-    position: absolute;
-    left: 0;
-    width: 20px;
-    text-align: right;
-    padding-right: 5px;
-}
-
-.stat-group.models li::before {
-    content: "📱";
-}
-
-.stat-group.scenarios li::before {
-    content: "🎯";
-}
-
+.stat-group li::before,
+.stat-group.models li::before,
+.stat-group.scenarios li::before,
 .stat-group.metrics li::before {
-    content: "📊";
+    display: none !important;
+    content: none !important;
 }
 
 .stat-group ul {
-    counter-reset: item;
+    /* counter-reset: item; */
 }
 
 .stat-group li {
-    counter-increment: item;
+    /* counter-increment: item; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .stats-section {
+        max-width: 100%;
+        padding: 18px 4vw;
+    }
+
     .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
+    }
+
+    .stat-group {
+        max-width: 100%;
+        min-width: 0;
+        padding: 18px 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .stat-group {
+        padding: 12px 4px;
+    }
+
+    .stat-group h2 {
+        font-size: 18px;
     }
 
     .stat-group li {
-        white-space: normal;
+        font-size: 13px;
     }
 }
 

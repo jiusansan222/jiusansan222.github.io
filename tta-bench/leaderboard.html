@@ -46,83 +46,153 @@
             <table class="leaderboard-table">
                 <thead>
                     <tr>
-                        <th>Rank</th>
-                        <th>Model Name</th>
-                        <th>Overall Score</th>
-                        <th>Quality</th>
-                        <th>Text Alignment</th>
+                        <th rowspan="2">System</th>
+                        <th colspan="5">Objective</th>
+                        <th colspan="5">Subjective (Crowd / Expert)</th>
+                    </tr>
+                    <tr>
+                        <th>CE</th>
+                        <th>CU</th>
+                        <th>PC</th>
+                        <th>PQ</th>
+                        <th>CLAP</th>
+                        <th>MPC</th>
+                        <th>MCE</th>
+                        <th>MPQ</th>
+                        <th>MAli</th>
+                        <th>MCU</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
                         <td>AudioGen</td>
-                        <td>92.5</td>
-                        <td>94.3</td>
-                        <td>90.8</td>
+                        <td>2.89</td>
+                        <td>4.54</td>
+                        <td>3.18</td>
+                        <td>5.33</td>
+                        <td>0.39</td>
+                        <td>3.54 / 2.88</td>
+                        <td>3.18 / 1.93</td>
+                        <td>4.82 / 4.35</td>
+                        <td>5.08 / 5.40</td>
+                        <td>3.64 / 3.20</td>
                     </tr>
                     <tr>
-                        <td>2</td>
                         <td>AudioLDM</td>
-                        <td>89.7</td>
-                        <td>91.2</td>
-                        <td>88.3</td>
+                        <td>3.27</td>
+                        <td>5.10</td>
+                        <td>3.23</td>
+                        <td>5.82</td>
+                        <td>0.44</td>
+                        <td>3.11 / 2.88</td>
+                        <td>3.34 / 1.77</td>
+                        <td>5.25 / 3.44</td>
+                        <td>5.52 / 4.51</td>
+                        <td>3.94 / 3.14</td>
                     </tr>
                     <tr>
-                        <td>3</td>
                         <td>AudioLDM 2</td>
-                        <td>88.4</td>
-                        <td>90.1</td>
-                        <td>86.7</td>
+                        <td><b>3.48</b></td>
+                        <td><b>5.54</b></td>
+                        <td>3.00</td>
+                        <td><b>6.09</b></td>
+                        <td>0.40</td>
+                        <td>3.31 / 2.80</td>
+                        <td>3.87 / 3.64</td>
+                        <td>5.29 / 6.84</td>
+                        <td>5.06 / 7.51</td>
+                        <td>4.63 / 4.50</td>
                     </tr>
                     <tr>
-                        <td>4</td>
                         <td>Auffusion</td>
-                        <td>85.9</td>
-                        <td>87.6</td>
-                        <td>84.2</td>
+                        <td>3.32</td>
+                        <td>5.11</td>
+                        <td>3.23</td>
+                        <td>5.72</td>
+                        <td><u>0.45</u></td>
+                        <td>3.62 / 2.90</td>
+                        <td>4.25 / 3.71</td>
+                        <td>5.56 / 6.76</td>
+                        <td>5.61 / <b>7.59</b></td>
+                        <td>4.94 / <u>4.57</u></td>
                     </tr>
                     <tr>
-                        <td>5</td>
                         <td>MAGNeT</td>
-                        <td>84.3</td>
-                        <td>89.5</td>
-                        <td>79.1</td>
+                        <td>2.89</td>
+                        <td>4.26</td>
+                        <td>3.61</td>
+                        <td>5.13</td>
+                        <td>0.39</td>
+                        <td>3.03 / 2.89</td>
+                        <td>2.86 / 2.20</td>
+                        <td>4.06 / 4.30</td>
+                        <td>4.37 / 5.70</td>
+                        <td>2.85 / 3.22</td>
                     </tr>
                     <tr>
-                        <td>6</td>
                         <td>Make-An-Audio</td>
-                        <td>82.7</td>
-                        <td>85.3</td>
-                        <td>80.1</td>
+                        <td>3.28</td>
+                        <td><u>5.33</u></td>
+                        <td>3.08</td>
+                        <td>5.78</td>
+                        <td>0.38</td>
+                        <td>3.55 / 3.05</td>
+                        <td>4.28 / 2.51</td>
+                        <td>5.47 / 5.77</td>
+                        <td>5.27 / 6.83</td>
+                        <td>4.46 / 3.89</td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>Make-An-Audio2</td>
-                        <td>79.8</td>
-                        <td>81.4</td>
-                        <td>78.2</td>
+                        <td>Make-An-Audio 2</td>
+                        <td>3.23</td>
+                        <td>4.98</td>
+                        <td>3.17</td>
+                        <td>5.58</td>
+                        <td>0.43</td>
+                        <td>3.86 / 2.88</td>
+                        <td>3.70 / 3.30</td>
+                        <td>5.40 / <b>6.63</b></td>
+                        <td>5.56 / 7.40</td>
+                        <td>4.55 / 3.90</td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td>Stable-Audio</td>
-                        <td>78.5</td>
-                        <td>80.9</td>
-                        <td>76.1</td>
+                        <td>Stable Audio Open</td>
+                        <td>3.05</td>
+                        <td>5.02</td>
+                        <td>2.74</td>
+                        <td>5.63</td>
+                        <td>0.35</td>
+                        <td>2.73 / 2.41</td>
+                        <td>2.90 / 2.34</td>
+                        <td>4.51 / 4.91</td>
+                        <td>4.20 / 5.99</td>
+                        <td>3.56 / 3.19</td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td>AudioLDM 2</td>
-                        <td>76.2</td>
-                        <td>78.5</td>
-                        <td>73.9</td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
                         <td>Tango</td>
-                        <td>74.8</td>
-                        <td>76.3</td>
-                        <td>73.3</td>
+                        <td>3.27</td>
+                        <td>5.15</td>
+                        <td><u>3.39</u></td>
+                        <td><u>5.96</u></td>
+                        <td>0.44</td>
+                        <td><b>4.20</b> / 3.24</td>
+                        <td><u>4.72</u> / <b>3.35</b></td>
+                        <td><u>6.00</u> / 6.49</td>
+                        <td><u>5.81</u> / 6.81</td>
+                        <td><u>5.20</u> / 4.45</td>
+                    </tr>
+                    <tr>
+                        <td>Tango 2</td>
+                        <td><u>3.47</u></td>
+                        <td>5.20</td>
+                        <td><b>3.84</b></td>
+                        <td>5.89</td>
+                        <td><b>0.46</b></td>
+                        <td><u>4.14</u> / <b>3.15</b></td>
+                        <td><b>4.73</b> / <b>3.35</b></td>
+                        <td><b>6.01</b> / <b>6.63</b></td>
+                        <td><b>5.94</b> / <b>7.59</b></td>
+                        <td><b>5.21</b> / <b>4.77</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -131,8 +201,6 @@
         <div class="leaderboard-info">
             <p>This leaderboard is based on the TTA-Bench evaluation framework, comprehensively considering accuracy,
                 generalization, efficiency, bias, fairness, toxicity, and robustness.</p>
-            <p>Scoring range: 0-100, with higher scores indicating better performance.</p>
-            <p>Last updated: May 5, 2025</p>
         </div>
     </div>
 </body>

@@ -43,97 +43,130 @@
         </h1>
 
         <div class="leaderboard-container">
-            <table class="leaderboard-table">
+            <table class="leaderboard-table" style="font-size:1.1em;">
                 <thead>
                     <tr>
-                        <th>Model Name</th>
-                        <th>Organization</th>
-                        <th>Release Time</th>
-                        <th>Parameter Scale</th>
-                        <th>Model Architecture</th>
+                        <th rowspan="2">Model</th>
+                        <th colspan="2">Basic Info</th>
+                        <th colspan="3">Model Configuration</th>
+                        <th colspan="2">Training Data</th>
+                    </tr>
+                    <tr>
+                        <th>Org.</th>
+                        <th>License</th>
+                        <th>Var.</th>
+                        <th>Params</th>
+                        <th>Arch.</th>
+                        <th>Source</th>
+                        <th>Dur.</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>AudioGen</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>AudioGen </td>
+                        <td>Meta</td>
+                        <td>CBN4</td>
+                        <td>med</td>
+                        <td>1.5B</td>
+                        <td>AR</td>
+                        <td>AS, AC + 8 oth.</td>
+                        <td>6824</td>
                     </tr>
                     <tr>
-                        <td>AudioLDM</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>AudioLDM </td>
+                        <td>Surrey</td>
+                        <td>CBNS4</td>
+                        <td>full</td>
+                        <td>739M</td>
+                        <td>LDM</td>
+                        <td>AS, AC + 2 oth.</td>
+                        <td>9031</td>
                     </tr>
                     <tr>
-                        <td>AudioLDM 2</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>AudioLDM 2 </td>
+                        <td>Surrey</td>
+                        <td>CBNS4</td>
+                        <td>large</td>
+                        <td>712M</td>
+                        <td>LDM</td>
+                        <td>AC, AS + 3 oth.</td>
+                        <td>29510</td>
                     </tr>
                     <tr>
-                        <td>Auffusion</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Auffusion <a href="#" title="auffusion">[4]</a></td>
+                        <td>BUPT</td>
+                        <td>CBNS4</td>
+                        <td>full</td>
+                        <td>1.1B</td>
+                        <td>LDM</td>
+                        <td>AC, AS + 9 oth.</td>
+                        <td>1990</td>
                     </tr>
                     <tr>
-                        <td>MAGNeT</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>MAGNeT <a href="#" title="ziv2024magnet">[5]</a></td>
+                        <td>Meta</td>
+                        <td>CBN4</td>
+                        <td>med</td>
+                        <td>1.5B</td>
+                        <td>NAR</td>
+                        <td>licensed data</td>
+                        <td>16000</td>
                     </tr>
                     <tr>
-                        <td>Make-An-Audio</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Make-An-Audio <a href="#" title="huang2023make1">[6]</a></td>
+                        <td>ZJU</td>
+                        <td>MIT</td>
+                        <td>—</td>
+                        <td>453M</td>
+                        <td>LDM</td>
+                        <td>AS, AC + 13 oth.</td>
+                        <td>~3k</td>
                     </tr>
                     <tr>
-                        <td>Make-An-Audio2</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Make-An-Audio 2 <a href="#" title="huang2023make2">[7]</a></td>
+                        <td>ZJU</td>
+                        <td>MIT</td>
+                        <td>—</td>
+                        <td>937M</td>
+                        <td>LDM</td>
+                        <td>AS, AC + 10 oth.</td>
+                        <td>3700</td>
                     </tr>
                     <tr>
-                        <td>Stable-Audio</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Stable-Audio Open <a href="#" title="evans2024stableaudio">[8]</a></td>
+                        <td>Stability AI</td>
+                        <td>Comm.</td>
+                        <td>1.0</td>
+                        <td>1057M</td>
+                        <td>DiT</td>
+                        <td>FS, FMA</td>
+                        <td>7300</td>
                     </tr>
                     <tr>
-                        <td>AudioLDM 2</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Tango <a href="#" title="ghosal2023tango">[9]</a></td>
+                        <td>DeClaRe</td>
+                        <td>CBNS4</td>
+                        <td>full</td>
+                        <td>866M</td>
+                        <td>LDM</td>
+                        <td>AS, AC + 7 oth.</td>
+                        <td>1.2M</td>
                     </tr>
                     <tr>
-                        <td>Voicebox</td>
-                        <td>Meta AI</td>
-                        <td>2023-06-01</td>
-                        <td>1B</td>
-                        <td>Transformer</td>
+                        <td>Tango 2 <a href="#" title="majumder2024tango2">[10]</a></td>
+                        <td>DeClaRe</td>
+                        <td>CBNS4</td>
+                        <td>full</td>
+                        <td>866M</td>
+                        <td>LDM</td>
+                        <td>AL</td>
+                        <td>-</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="leaderboard-info">
-            <p>This leaderboard is based on the TTA-Bench evaluation framework, comprehensively considering accuracy,
-                generalization, efficiency, bias, fairness, toxicity, and robustness.</p>
-            <p>Scoring range: 0-100, with higher scores indicating better performance.</p>
-            <p>Last updated: May 5, 2025</p>
-        </div>
+
     </div>
 </body>
 

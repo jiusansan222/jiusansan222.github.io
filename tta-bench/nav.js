@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'index.html'
         },
         {
+            text: 'Models 🎯',
+            link: 'models.html'
+        },
+        {
             text: 'Leaderboard 🏆',
             link: 'leaderboard.html',
             dropdown: [
@@ -13,19 +17,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 { text: 'Generalization Leaderboard', link: 'leaderboard_generalization.html' },
                 { text: 'Efficiency Leaderboard', link: 'leaderboard_efficiency.html' },
                 { text: 'Robustness Leaderboard', link: 'leaderboard_robustness.html' },
-                { text: 'Bias Leaderboard', link: 'leaderboard_bias.html' },
                 { text: 'Fairness Leaderboard', link: 'leaderboard_fairness.html' },
+                { text: 'Bias Leaderboard', link: 'leaderboard_bias.html' },
                 { text: 'Toxicity Leaderboard', link: 'leaderboard_toxicity.html' }
 
             ]
         },
         {
-            text: 'Models 🎯',
-            link: 'models.html'
-        },
-        {
             text: 'Samples 🎵',
-            link: 'samples.html'
+            link: 'samples.html',
+            dropdown: [
+                { text: 'Accuracy', link: 'samples.html' },
+                { text: 'Generalization', link: 'samples_generalization.html' },
+                { text: 'Robustness', link: 'samples_robustness.html' },
+                { text: 'Fairness', link: 'samples_fairness.html' },
+                { text: 'Bias', link: 'samples_bias.html' }
+            ]
         }
     ];
 

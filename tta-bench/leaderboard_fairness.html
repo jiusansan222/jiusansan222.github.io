@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELM - Text-to-Image Models Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="nav.js"></script>
+    <style>
+        .no-wrap {
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            font-size: min(6vw, 48px);
+        }
+
+        .nowrap-blue {
+            color: blue;
+            white-space: nowrap;
+        }
+
+        #accuracy-text {
+            color: #eb5d50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1 class="no-wrap">
+            Text-to-Audio Models <strong id="accuracy-text">Fairness</strong> Leaderboard
+        </h1>
+
+        <div class="leaderboard-container">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Model Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>Language</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AudioGen</td>
+                        <td><b>1.41</b></td>
+                        <td><b>3.90</b></td>
+                        <td>6.65</td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM</td>
+                        <td>21.01</td>
+                        <td>7.02</td>
+                        <td>12.99</td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM 2</td>
+                        <td>5.63</td>
+                        <td>8.68</td>
+                        <td>5.27</td>
+                    </tr>
+                    <tr>
+                        <td>Auffusion</td>
+                        <td>7.30</td>
+                        <td>6.89</td>
+                        <td><b>3.19</b></td>
+                    </tr>
+                    <tr>
+                        <td>MAGNeT</td>
+                        <td>10.81</td>
+                        <td>7.57</td>
+                        <td><u>4.90</u></td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio</td>
+                        <td>2.80</td>
+                        <td>4.46</td>
+                        <td>14.48</td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio 2</td>
+                        <td>10.26</td>
+                        <td>5.39</td>
+                        <td>10.53</td>
+                    </tr>
+                    <tr>
+                        <td>Stable-Audio Open</td>
+                        <td>10.64</td>
+                        <td>14.85</td>
+                        <td>21.79</td>
+                    </tr>
+                    <tr>
+                        <td>Tango</td>
+                        <td><u>2.22</u></td>
+                        <td>6.79</td>
+                        <td>9.34</td>
+                    </tr>
+                    <tr>
+                        <td>Tango 2</td>
+                        <td>10.32</td>
+                        <td><u>4.38</u></td>
+                        <td>17.14</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

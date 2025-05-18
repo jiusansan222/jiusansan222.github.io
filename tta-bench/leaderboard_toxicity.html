@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELM - Text-to-Image Models Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="nav.js"></script>
+    <style>
+        .no-wrap {
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            font-size: min(6vw, 48px);
+        }
+
+        .nowrap-blue {
+            color: blue;
+            white-space: nowrap;
+        }
+
+        #accuracy-text {
+            color: #eb5d50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1 class="no-wrap">
+            Text-to-Audio Models <strong id="accuracy-text">Toxicity</strong> Leaderboard
+        </h1>
+
+        <div class="leaderboard-container">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Model Name</th>
+                        <th>Hate</th>
+                        <th>Viol/Self</th>
+                        <th>Sexual</th>
+                        <th>Shock</th>
+                        <th>Illegal</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AudioGen</td>
+                        <td>0.817</td>
+                        <td>0.883</td>
+                        <td>0.883</td>
+                        <td>0.917</td>
+                        <td>0.850</td>
+                        <td>0.870</td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM</td>
+                        <td><span style="text-decoration:underline">0.833</span></td>
+                        <td><b>0.700</b></td>
+                        <td><b>0.433</b></td>
+                        <td><b>0.800</b></td>
+                        <td><b>0.717</b></td>
+                        <td><b>0.697</b></td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM 2</td>
+                        <td>0.950</td>
+                        <td>0.917</td>
+                        <td>0.700</td>
+                        <td><span style="text-decoration:underline">0.867</span></td>
+                        <td>0.850</td>
+                        <td>0.857</td>
+                    </tr>
+                    <tr>
+                        <td>Auffusion</td>
+                        <td>0.917</td>
+                        <td>0.917</td>
+                        <td>0.783</td>
+                        <td>0.967</td>
+                        <td>0.917</td>
+                        <td>0.900</td>
+                    </tr>
+                    <tr>
+                        <td>MAGNeT</td>
+                        <td>0.967</td>
+                        <td>0.983</td>
+                        <td>0.950</td>
+                        <td>0.900</td>
+                        <td>0.900</td>
+                        <td>0.940</td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio</td>
+                        <td>0.967</td>
+                        <td>0.917</td>
+                        <td>0.883</td>
+                        <td>0.917</td>
+                        <td>0.900</td>
+                        <td>0.917</td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio 2</td>
+                        <td>0.867</td>
+                        <td><span style="text-decoration:underline">0.850</span></td>
+                        <td>0.717</td>
+                        <td>0.917</td>
+                        <td><b>0.950</b></td>
+                        <td><span style="text-decoration:underline">0.860</span></td>
+                    </tr>
+                    <tr>
+                        <td>Stable-Audio Open</td>
+                        <td>0.967</td>
+                        <td>0.900</td>
+                        <td><span style="text-decoration:underline">0.667</span></td>
+                        <td>0.900</td>
+                        <td>0.783</td>
+                        <td>0.843</td>
+                    </tr>
+                    <tr>
+                        <td>Tango</td>
+                        <td><span style="text-decoration:underline">0.950</span></td>
+                        <td><span style="text-decoration:underline">0.950</span></td>
+                        <td>0.700</td>
+                        <td>0.900</td>
+                        <td><span style="text-decoration:underline">0.750</span></td>
+                        <td>0.850</td>
+                    </tr>
+                    <tr>
+                        <td>Tango 2</td>
+                        <td><b>1.000</b></td>
+                        <td><b>0.950</b></td>
+                        <td><b>0.850</b></td>
+                        <td><b>0.983</b></td>
+                        <td><b>0.967</b></td>
+                        <td><b>0.950</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

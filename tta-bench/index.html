@@ -28,56 +28,42 @@
 
         <div class="buttons">
             <a href="#" class="btn">PAPER</a>
-            <a href="#" class="btn">GITHUB</a>
-            <a href="#" class="btn">DATASET</a>
+            <a href="https://github.com/lcc-404/TTA-Bench-tools" class="btn" target="_blank">GITHUB</a>
+            <a href="https://huggingface.co/datasets/Hui519/TTA-Bench" class="btn" target="_blank">DATASET</a>
         </div>
 
         <div class="description">
-            <p style="color: #2c3e50; font-size: 1.1em;">Text-to-Audio (TTA) generation has made <span
-                    style="font-weight: bold;">significant strides</span> with the rise of large-scale generative
-                models.
-                However, existing evaluation methods for TTA systems are often <span
-                    style="font-weight: bold;">fragmented</span>, covering only limited aspects of model performance and
-                relying heavily on manual assessment. To address this, we propose <span
-                    style="font-weight: bold;">AudioEval</span>, a comprehensive and standardized benchmark designed to
-                systematically evaluate TTA models across multiple dimensions including <span
-                    style="font-weight: bold;">accuracy</span>, <span style="font-weight: bold;">generalization</span>,
-                <span style="font-weight: bold;">efficiency</span>, <span style="font-weight: bold;">reliability</span>,
-                and
-                <span style="font-weight: bold;">fairness</span>. AudioEval encompasses ten state-of-the-art TTA models,
-                combining large-scale automatic evaluation metrics with human annotations to ensure robustness and
-                reproducibility. Our experimental results demonstrate that AudioEval effectively differentiates model
-                capabilities at various granularities and provides actionable insights for improving TTA systems.
+            <p style="color: #2c3e50; font-size: 1.1em;">Text-to-Audio (TTA) generation has made rapid progress, but
+                current evaluation methods remain narrow, focusing mainly on perceptual quality while overlooking
+                robustness, generalization, and ethical concerns. We present <span
+                    style="font-weight: bold;">TTA-Bench</span>, a comprehensive benchmark for evaluating TTA models
+                across functional performance, reliability, and social responsibility. It covers seven dimensions
+                including <span style="font-weight: bold;">accuracy</span>, <span
+                    style="font-weight: bold;">robustness</span>, <span style="font-weight: bold;">fairness</span>, and
+                <span style="font-weight: bold;">toxicity</span>, and includes 2,999 diverse prompts generated through
+                automated and manual methods. We introduce a unified evaluation protocol that combines objective metrics
+                with over 118,000 human annotations from both experts and general users. Ten state-of-the-art models are
+                benchmarked under this framework, offering detailed insights into their strengths and limitations.
+                TTA-Bench establishes a new standard for holistic and responsible evaluation of TTA systems.
             </p>
 
-            <p>We identify 5 different aspects that are important in real-world model deployment, including:</p>
+            <p>We identify 7 different aspects that are important in real-world model deployment, including:</p>
         </div>
 
         <ul class="features">
-            <li>accuracy</li>
-            <li>generalization</li>
-            <li>efficiency</li>
-            <li>bias</li>
-            <li>fairness</li>
-            <li>toxicity</li>
-            <li>robustness</li>
+            <li>Accuracy</li>
+            <li>Efficiency </li>
+            <li>Generalization </li>
+            <li>Robustness</li>
+            <li>Fairness</li>
+            <li>Bias</li>
+            <li>Toxicity</li>
         </ul>
 
-        <div class="description">
-            <p>By curating scenarios encompassing these aspects, we evaluate state-of-the-art text-to-image models using
-                this benchmark. Unlike previous evaluations that focused on alignment and quality, HEIM significantly
-                improves coverage by evaluating all models across all aspects. Our results reveal that no single model
-                excels in all aspects, with different models demonstrating strengths in different aspects.</p>
 
-            <p>For full transparency, this website contains all the prompts, generated audios and the results for the
-                automated and human evaluation metrics.</p>
-
-            <p>Inspired by HELM, we decompose the model evaluation into four key components: aspect, scenario,
-                adaptation, and metric:</p>
-        </div>
 
         <div style="text-align: center;">
-            <img src="image/test.jpg" alt="Test Image">
+            <img src="image/overview_framework.jpg" alt="Test Image">
         </div>
 
         <div class="stats-section">
@@ -98,42 +84,27 @@
                     </ul>
                 </div>
 
-                <div class="stat-group">
-                    <h2>29 scenarios</h2>
-                    <ul>
-                        <li>MS-COCO (base)</li>
-                        <li>MS-COCO Fidelity</li>
-                        <li>MS-COCO Efficiency</li>
-                        <li>MS-COCO (fairness - gender)</li>
-                        <li>MS-COCO (fairness - AAVE dialect)</li>
-                        <li>MS-COCO (robustness)</li>
-                        <li>MS-COCO (Chinese)</li>
-                        <li>MS-COCO (Hindi)</li>
-                        <li>MS-COCO (Spanish)</li>
-                        <li>MS-COCO (Art styles)</li>
-                        <li>Caltech-UCSD Birds-200-2011</li>
-                        <li>DrawBench (image quality categories)</li>
-                        <li>PartiPrompts (image quality categories)</li>
-                        <li>dailydall.e</li>
-                        <li>Landing Page</li>
-                        <li>Logos</li>
-                        <li>Magazine Cover Photos</li>
-                    </ul>
-                </div>
 
                 <div class="stat-group">
-                    <h2>33 metrics</h2>
-                    <span>Efficiency</span>
+                    <h2>16 metrics</h2>
+                    <span>Subjective Metrics</span>
                     <ul>
-                        <li>Denoised inference runtime (s)</li>
+                        <li>MOS-Complexity</li>
+                        <li>MOS-Enjoyment</li>
+                        <li>MOS-Quality</li>
+                        <li>MOS-Alignment</li>
+                        <li>MOS-Usefulness/li>
+                        <li>Toxic</li>
                     </ul>
-                    <span>Efficiency</span>
+                    <span>Objective Metrics</span>
                     <ul>
-                        <li>Inference runtime (in seconds)</li>
-                        <li>Idealized inference runtime (s)</li>
-                        <li>Denoised inference runtime (s)</li>
-                        <li>Estimated training emissions (kg CO2)</li>
-                        <li>Estimated training energy cost (MWh)</li>
+                        <li>AES Score (4-dim)</li>
+                        <li>CLAP Score</li>
+                        <li>Real-Time Factor</li>
+                        <li>Robustness Score</li>
+                        <li>Fairness Score</li>
+                        <li>Mean Absolute Deviation</li>
+                        <li>Toxic Rate</li>
                     </ul>
                 </div>
             </div>

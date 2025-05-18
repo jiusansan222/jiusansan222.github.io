@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HELM - Text-to-Image Models Leaderboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="leaderboard.css">
+    <script src="nav.js"></script>
+    <style>
+        .no-wrap {
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            font-size: min(6vw, 48px);
+        }
+
+        .nowrap-blue {
+            color: blue;
+            white-space: nowrap;
+        }
+
+        #accuracy-text {
+            color: #eb5d50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+        </div>
+        <nav>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1 class="no-wrap">
+            Text-to-Audio Models <strong id="accuracy-text">Robustness</strong> Leaderboard
+        </h1>
+
+        <div class="leaderboard-container">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>System</th>
+                        <th>Uppercase</th>
+                        <th>Synonym</th>
+                        <th>Misspelling</th>
+                        <th>Whitespace</th>
+                        <th>Rewrite</th>
+                        <th>Punctuation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AudioGen</td>
+                        <td><b>0.992</b></td>
+                        <td>0.978</td>
+                        <td><u>0.985</u></td>
+                        <td>0.978</td>
+                        <td><b>1.000</b></td>
+                        <td>1.074</td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM</td>
+                        <td>1.032</td>
+                        <td>0.955</td>
+                        <td>0.962</td>
+                        <td>0.955</td>
+                        <td>1.041</td>
+                        <td><b>0.992</b></td>
+                    </tr>
+                    <tr>
+                        <td>AudioLDM 2</td>
+                        <td>1.076</td>
+                        <td>1.060</td>
+                        <td><b>1.007</b></td>
+                        <td>0.986</td>
+                        <td>1.014</td>
+                        <td>1.060</td>
+                    </tr>
+                    <tr>
+                        <td>Auffusion</td>
+                        <td>1.078</td>
+                        <td><u>0.979</u></td>
+                        <td>0.939</td>
+                        <td><b>1.000</b></td>
+                        <td>1.053</td>
+                        <td><u>0.979</u></td>
+                    </tr>
+                    <tr>
+                        <td>MAGNeT</td>
+                        <td>0.951</td>
+                        <td>0.815</td>
+                        <td>0.843</td>
+                        <td>0.882</td>
+                        <td>0.829</td>
+                        <td>0.815</td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio</td>
+                        <td><u>0.979</u></td>
+                        <td><b>0.986</b></td>
+                        <td>0.965</td>
+                        <td>0.993</td>
+                        <td>0.958</td>
+                        <td>0.972</td>
+                    </tr>
+                    <tr>
+                        <td>Make-An-Audio-2</td>
+                        <td>1.156</td>
+                        <td>1.146</td>
+                        <td>1.175</td>
+                        <td>1.146</td>
+                        <td>1.175</td>
+                        <td>1.175</td>
+                    </tr>
+                    <tr>
+                        <td>Stable Audio Open</td>
+                        <td>1.172</td>
+                        <td>1.124</td>
+                        <td>1.101</td>
+                        <td>1.069</td>
+                        <td>1.028</td>
+                        <td>1.079</td>
+                    </tr>
+                    <tr>
+                        <td>Tango</td>
+                        <td>1.140</td>
+                        <td>1.078</td>
+                        <td>1.022</td>
+                        <td><b>1.000</b></td>
+                        <td>1.030</td>
+                        <td>1.045</td>
+                    </tr>
+                    <tr>
+                        <td>Tango 2</td>
+                        <td>1.214</td>
+                        <td>1.084</td>
+                        <td>1.022</td>
+                        <td>0.986</td>
+                        <td><u>1.007</u></td>
+                        <td>1.022</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

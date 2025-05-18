@@ -35,7 +35,7 @@
 }
 
 .leaderboard-table tbody tr:nth-child(1) {
-    background-color: #fff9e6;
+    background-color: white;
 }
 
 .leaderboard-table tbody tr:nth-child(1) td:first-child {
