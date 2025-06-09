@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="" https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <title>StreamMel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+    <div class="container">
+        <header role="banner">
+        </header>
+        <main role="main">
+            <article itemscope itemtype="https://schema.org/BlogPosting">
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <div class="text-center">
+                        <h1>StreamMel</h1>
+                        <h3>Real‑Time Zero-shot Text‑to‑Speech via</h2>
+                            <h3>Interleaved Continuous Autoregressive Modeling</h2>
+                                <br>
+
+                    </div>
+                    <p>
+                        <b>Abstract.</b>
+                        Recent advances in zero-shot text-to-speech (TTS) synthesis have achieved remarkable success in generating high-quality speech for unseen speakers but are designed for offline generation and are not suitable for real-time applications. 
+                        Existing streaming TTS paradigms are frequently hindered by the constraints of multi-stage processing pipelines and the dependence on discrete representations, which significantly impedes the ability to achieve an optimal trade-off between system performance and computational efficiency. 
+                        In this work, we propose StreamMel, a single-stage streaming TTS framework that directly models continuous mel-spectrograms in an interleaved fashion. 
+                        By interleaving text tokens with previously generated acoustic frames, StreamMel enables low-latency, autoregressive synthesis while preserving high speaker similarity and naturalness. 
+                        Experiments on LibriSpeech demonstrate that StreamMel outperforms existing streaming TTS baselines in both quality and latency, achieving performance comparable to offline systems while supporting efficient real-time generation.
+                    </p>
+
+                    <p>
+
+                        <!-- <br> <br> -->
+                        <b>Contents</b>
+                    <ul>
+                        <li><a href="#model-overview">Model Overview</a></li>
+                        <li><a href="#cross_infer">Zero-Shot Text-to-Speech for Cross-Sentence Task</a></li>
+                        <li><a href="#conti_infer">Zero-Shot Text-to-Speech for Continuation Task</a></li>
+                        <li><a href="#param_infer">StreamMel with Different Parameter Configurations</a></li>
+                        <li><a href="#Ethics-Statement">Ethics Statement</a></li>
+                    </ul>
+                    </p>
+
+
+                </div>
+
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h2 id="model-overview" style="text-align: center;">Model Overview</h2>
+
+                    <body>
+                        <p style="text-align: center;">
+                            <img src="pics/overview.png" height="500" width="800">
+                        </p>
+                    </body>
+                    <p style="width: 80%; margin: auto; ">
+                        <b>Figure.</b>
+                         Overview of StreamMel, an autoregressive, single-pass model that generates continuous speech representations from streaming, interleaved text and speech inputs.
+                    </p>
+                </div>
+
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h2 id="cross_infer" style="text-align: center;">Zero-Shot Text-to-Speech for Cross-Sentence Task
+                    </h2>
+
+                    <div class="table-responsive pt-3">
+                        <p style="text-align: center;">
+                            Samples are from LibriSpeech dataset.
+                        </p>
+                        <table class="table table-hover pt-2">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center">English Text</th>
+                                    <th style="text-align: center">Prompt Audio</th>
+                                    <th style="text-align: center">StreamMel</th>
+                                    <th style="text-align: center">IST-LM</th>
+                                    <th style="text-align: center">SMLLE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">after early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1089-134686-0002_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1089-134686-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_1089-134686-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_1089-134686-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">then as if satisfied of their safety the scout left his position and slowly entered the place</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1188-133604-0005_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1188-133604-0005.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_1188-133604-0005.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_1188-133604-0005.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">positively heroic added cresswell avoiding his sister is eyes</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_121-121726-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_121-121726-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_121-121726-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_121-121726-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">i will endeavor in my statement to avoid such terms as would serve to limit the events to any particular place or give a clue as to the people concerned</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1580-141083-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1580-141083-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_1580-141083-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_1580-141083-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">the paris plant like that at the crystal palace was a temporary exhibit</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_2300-131720-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_2300-131720-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_2300-131720-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_2300-131720-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">then dear said missus whitney you must be kinder to her than ever think what it would be for one of you to be away from home even among friends</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_237-126133-0002_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_237-126133-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_237-126133-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_237-126133-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">he had preconceived ideas about everything and his idea about americans was that they should be engineers or mechanics</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_4446-2271-0001_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_4446-2271-0001.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_4446-2271-0001.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_4446-2271-0001.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">she has a son theft and a daughter hunger</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_4507-16021-0003_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_4507-16021-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_4507-16021-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_4507-16021-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">it is such a noble ambition that it is a pity it has usually such a shallow foundation</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_4970-29093-0007_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_4970-29093-0007.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_4970-29093-0007.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_4970-29093-0007.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">out in the woods stood a nice little fir tree</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_672-122797-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_672-122797-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_672-122797-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_672-122797-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">the poor little things cried cynthia think of them having been turned to the wall all these years</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-76324-0002_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-76324-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-76324-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-76324-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr> -->
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">hers happened to be in the same frame too but she evidently did not care about that</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-76324-0006_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-76324-0006.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-76324-0006.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-76324-0006.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">we will come in here this afternoon with old clothes on and have a regular house cleaning</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-76324-0012_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-76324-0012.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-76324-0012.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-76324-0012.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">this thought however did not enter the heads of the enthusiastic pair</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-76324-0014_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-76324-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-76324-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-76324-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">in the light of the moon i saw a knife red with blood and my hand too was also discolored</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-81414-0014_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-81414-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-81414-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-81414-0014.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">my tongue refused to articulate my power of speech left me</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_6930-81414-0024_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_6930-81414-0024.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_6930-81414-0024.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_6930-81414-0024.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr> -->
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">gentlemen to your posts whereupon saint aignan and villeroy took their leave</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_7127-75946-0003_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_7127-75946-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_7127-75946-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_7127-75946-0003.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">that summer is emigration however being mainly from the free states greatly changed the relative strength of the 2 parties</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_7729-102255-0002_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_7729-102255-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_istlm_7729-102255-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_smlle_7729-102255-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h2 id="conti_infer" style="text-align: center;">Zero-Shot Text-to-Speech for Continuation Task</h2>
+
+                    <div class="table-responsive pt-3">
+                        <p style="text-align: center;">
+                            Samples are from LibriSpeech dataset.
+                        </p>
+                        <p style="text-align: center;">
+                            <i>Note: The first 3 seconds of each speaker prompt audio are used as the reference prompt for synthesis.</i>
+                        </p>
+                        <table class="table table-hover pt-2">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center">English Text</th>
+                                    <th style="text-align: center">Ground Truth</th>
+                                    <th style="text-align: center">StreamMel</th>
+                                    <th style="text-align: center">IST-LM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">the dews were suffered to exhale and the sun had dispersed the mists and was shedding a strong and clear light in the forest when the travelers resumed their journey </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_1320-122612-0001.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1320-122612-0001_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1320-122612-0001_istlm.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">i will endeavor in my statement to avoid such terms as would serve to limit the events to any particular place or give a clue as to the people concerned</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_1580-141083-0000.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1580-141083-0000_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1580-141083-0000_istlm_notknow.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">in the debate between the senior societies her defense of the 15th amendment had been not only a notable bit of reasoning but delivered with real enthusiasm</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_1995-1826-0000.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1995-1826-0000_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_1995-1826-0000_istlm.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">but the windows are patched with wooden panes and the door i think is like the gate it is never opened</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_2094-142345-0001.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_2094-142345-0001_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_2094-142345-0001_istlm_notknow.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">then dear said missus whitney you must be kinder to her than ever think what it would be for one of you to be away from home even among friends</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_237-126133-0002.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_237-126133-0002_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_237-126133-0002_istlm.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">we want you to help us publish some leading work of luther is for the general american market will you do it</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_2830-3979-0000.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_2830-3979-0000_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_2830-3979-0000_istlm_notknow.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">he had preconceived ideas about everything and his idea about americans was that they should be engineers or mechanics</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cont_speaker_4446-2271-0001.flac" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_4446-2271-0001_stream_mel.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/continue_4446-2271-0001_istlm_notknow.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h2 id="param_infer" style="text-align: center;">StreamMel with Different Parameter Configurations</h2>
+
+                    <div class="table-responsive pt-3">
+                        <p style="text-align: center;">
+                            Samples are from LibriSpeech dataset. We compare StreamMel's performance under different n:m (Number of text tokens to acoustic frames) settings.
+                        </p>
+                        <table class="table table-hover pt-2">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center">English Text</th>
+                                    <th style="text-align: center">Prompt Audio</th>
+                                    <th style="text-align: center">None streaming</th>
+                                    <th style="text-align: center">n:m=2:1</th>
+                                    <th style="text-align: center">n:m=1:2</th>
+                                    <th style="text-align: center">n:m=1:4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">after early nightfall the yellow lamps would light up here and there the squalid quarter of the brothels</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1089-134686-0002_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1089-134686-0002_n0m0.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1089-134686-0002_n2m1.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1089-134686-0002_n1m2.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1089-134686-0002.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">then as if satisfied of their safety the scout left his position and slowly entered the place</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1188-133604-0005_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1188-133604-0005_n0m0.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1188-133604-0005_n2m1.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1188-133604-0005_n1m2.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1188-133604-0005.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">positively heroic added cresswell avoiding his sister is eyes</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_121-121726-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_121-121726-0000_n0m0.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_121-121726-0000_n2m1.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_121-121726-0000_n1m2.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_121-121726-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">i will endeavor in my statement to avoid such terms as would serve to limit the events to any particular place or give a clue as to the people concerned</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1580-141083-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1580-141083-0000_n0m0.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1580-141083-0000_n2m1.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_1580-141083-0000_n1m2.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_1580-141083-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">the paris plant like that at the crystal palace was a temporary exhibit</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_2300-131720-0000_prompt.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_2300-131720-0000_n0m0.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_2300-131720-0000_n2m1.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_2300-131720-0000_n1m2.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/cross_stream_mel_2300-131720-0000.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">surely it must be because we are in danger of loving each other too well of losing sight of the creator in idolatry of the creature</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg16_3575-170457-0003_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe6_cfg16_3575-170457-0003_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg10_3575-170457-0003_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg22_3575-170457-0003_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;vertical-align:middle;width: 600px">i have not had a chance yet to tell you what a jolly little place i think this is</td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg16_4446-2273-0005_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe6_cfg16_4446-2273-0005_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg10_4446-2273-0005_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <audio controls="controls" style="width: 140px;">
+                                            <source src="all/param_felle_nfe3_cfg22_4446-2273-0005_s0_gen.wav" />
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
+                    <h2 id="Ethics-Statement" style="text-align: center;">Ethics Statement</h2>
+                    <p>
+                        StreamMel is a research prototype designed to explore low-latency, streaming speech synthesis. It can generate high-quality, 
+                        speaker-consistent audio suitable for applications such as education, entertainment, accessibility tools, interactive voice response, 
+                        real-time translation, chatbot agents, and self-authored content. 
+                        Although StreamMel can emulate a target voice, the ultimate similarity and naturalness depend on factors like prompt length, recording quality, 
+                        and background noise. Misuse risks include unauthorized voice cloning or speaker impersonation. 
+                        All reported experiments assume that the user has consented to serve as the target speaker; 
+                        broader deployment would require explicit speaker approval and integration of a synthesized-speech detection mechanism.
+
+                    <p>This page is for <b>research demonstration purposes</b> only.</p>
+
+                    </p>
+                </div>
+
+            </article>
+        </main>
+    </div>
+
+</body>
+
+</html>
