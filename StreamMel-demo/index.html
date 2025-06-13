@@ -33,11 +33,14 @@
                     </div>
                     <p>
                         <b>Abstract.</b>
-                        Recent advances in zero-shot text-to-speech (TTS) synthesis have achieved remarkable success in generating high-quality speech for unseen speakers but are designed for offline generation and are not suitable for real-time applications. 
-                        Existing streaming TTS paradigms are frequently hindered by the constraints of multi-stage processing pipelines and the dependence on discrete representations, which significantly impedes the ability to achieve an optimal trade-off between system performance and computational efficiency. 
-                        In this work, we propose StreamMel, a single-stage streaming TTS framework that directly models continuous mel-spectrograms in an interleaved fashion. 
-                        By interleaving text tokens with previously generated acoustic frames, StreamMel enables low-latency, autoregressive synthesis while preserving high speaker similarity and naturalness. 
-                        Experiments on LibriSpeech demonstrate that StreamMel outperforms existing streaming TTS baselines in both quality and latency, achieving performance comparable to offline systems while supporting efficient real-time generation.
+                        Recent advances in zero-shot text-to-speech (TTS) synthesis have achieved remarkable success in generating high-quality speech for unseen speakers.
+                         However, most systems are designed for offline generation and are not suitable for real-time applications. 
+                         Current streaming TTS paradigms are often constrained by multi-stage processing pipelines and a reliance on discrete representations, 
+                         leading to a dual dilemma that compromises both system performance and computational efficiency. 
+                         In this work, we propose StreamMel, a pioneering single-stage streaming TTS framework that models continuous mel-spectrograms. 
+                         By interleaving text tokens with acoustic frames, StreamMel enables low-latency, autoregressive synthesis while preserving high speaker similarity and naturalness. 
+                         Experiments on LibriSpeech demonstrate that StreamMel outperforms existing streaming TTS baselines in both quality and latency, 
+                         achieving performance comparable to offline systems while supporting efficient real-time generation.
                     </p>
 
                     <p>
@@ -426,34 +429,6 @@
                                         </audio>
                                     </td>
                                 </tr>
-
-                                <!-- <tr>
-                                    <td style="text-align: left;vertical-align:middle;width: 600px">we will come in here this afternoon with old clothes on and have a regular house cleaning</td>
-                                    <td style="text-align: center">
-                                        <audio controls="controls" style="width: 140px;">
-                                            <source src="all/cross_6930-76324-0012_prompt.wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td style="text-align: center">
-                                        <audio controls="controls" style="width: 140px;">
-                                            <source src="all/cross_stream_mel_6930-76324-0012.wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td style="text-align: center">
-                                        <audio controls="controls" style="width: 140px;">
-                                            <source src="all/cross_istlm_6930-76324-0012.wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                    <td style="text-align: center">
-                                        <audio controls="controls" style="width: 140px;">
-                                            <source src="all/cross_smlle_6930-76324-0012.wav" />
-                                            Your browser does not support the audio element.
-                                        </audio>
-                                    </td>
-                                </tr> -->
 
                                 <tr>
                                     <td style="text-align: left;vertical-align:middle;width: 600px">this thought however did not enter the heads of the enthusiastic pair</td>
