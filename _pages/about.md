@@ -26,7 +26,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 
 # 🔥 News
-- *2025.04*: &nbsp;🎉 The AudioMOS Challenge 2025 is now open, and I’m grateful to be involved as one of the organizers. For more details, visit [AudioMOS Challenge 2025](https://sites.google.com/view/voicemos-challenge/audiomos-challenge-2025).
+- *2025.04*: &nbsp;🎉 The AudioMOS Challenge 2025 is now open, and I'm grateful to be involved as one of the organizers. For more details, visit [AudioMOS Challenge 2025](https://sites.google.com/view/voicemos-challenge/audiomos-challenge-2025).
 - *2025.04*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is now open-source. You can access it [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk) [![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/BAAI/SeniorTalk).
 
 # 📝 Publications 
@@ -42,6 +42,8 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 **Hui Wang**, Shujie Liu, Lingwei Meng, Jinyu Li, Yifan Yang, Shiwan Zhao, Haiyang Sun, Yanqing Liu, Haoqin Sun, Jiaming Zhou, Yan Lu, Yong Qin
 </div>
 </div>
+
+- [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), *arXiv*, **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
 
 ## 🎤 Speech & Audio & Music Quality Assessment
 
