@@ -92,4 +92,4 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
  -->
 
 # 💻 Internships
-- *2024.07 - 2025.02*, Microsoft Research Asia, Beijing.
+- *2024.07 - 2025.07*, Microsoft Research Asia, Beijing.
