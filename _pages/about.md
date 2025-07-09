@@ -34,7 +34,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 ## 🎙 Speech Synthesis
 
 <!-- 论文1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/felle.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACM MM 2025</div><img src='images/felle.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [FELLE: Autoregressive Speech Synthesis with Token-Wise Coarse-to-Fine Flow Matching](https://arxiv.org/abs/2502.11128)
