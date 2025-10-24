@@ -26,8 +26,8 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 
 # 🔥 News
-- *2025.04*: &nbsp;🎉 The AudioMOS Challenge 2025 is now open, and I'm grateful to be involved as one of the organizers. For more details, visit [AudioMOS Challenge 2025](https://sites.google.com/view/voicemos-challenge/audiomos-challenge-2025).
-- *2025.04*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is now open-source. You can access it [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk) [![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/BAAI/SeniorTalk).
+- *2025.10*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is accepted by NeurIPS 2025.
+- *2025.09*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is accepted by NeurIPS 2025.
 
 # 📝 Publications 
 
@@ -43,26 +43,28 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 </div>
 </div>
 
-- [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), *arXiv*, **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
+- [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), *SPL*, **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
 
 ## 🎤 Speech & Audio & Music Quality Assessment
 
 <!-- 论文1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TASLP</div><img src='images/ramp_2025.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TASLP</div><img src='images/SpeechLLMasJudge.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
+[RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540) *IEEE TASLP*,
 
-[RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540)
+**Hui Wang**, Shiwan Zhao, Xiguang Zheng, Jiaming Zhou, Xuechen Wang, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/RAMP_MOS)
+</div>
+</div>
+
+
+[RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540) *IEEE TASLP*,
 
 **Hui Wang**, Shiwan Zhao, Xiguang Zheng, Jiaming Zhou, Xuechen Wang, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/RAMP_MOS)
 </div>
 </div>
 
 <!-- 论文2 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Interspeech 2023</div><img src='images/ramp_2023.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[RAMP: Retrieval-Augmented MOS Prediction via Confidence-based Dynamic Weighting](https://arxiv.org/abs/2308.16488)
-
+- [RAMP: Retrieval-Augmented MOS Prediction via Confidence-based Dynamic Weighting](https://arxiv.org/abs/2308.16488), *Interspeech 2023*,
 **Hui Wang**, Shiwan Zhao, Xiguang Zheng, Yong Qin
 </div>
 </div>
@@ -74,9 +76,13 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 - [MusicEval: A Generative Music Dataset with Expert Ratings for Automatic Text-to-Music Evaluation](https://arxiv.org/abs/2501.10811), *ICASSP 2025*, Cheng Liu\*, **Hui Wang**\*, Jinghua Zhao, Shiwan Zhao, Hui Bu, Xin Xu, Jiaming Zhou, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/MusicEval-baseline)
 
-## 🔍 Audio Analysis
+- [AudioEval: Automatic Dual-Perspective and Multi-Dimensional Evaluation of Text-to-Audio-Generation](https://arxiv.org/abs/2510.14570), **Hui Wang**, Jinghua Zhao, Cheng Liu, Yuhang Jia, Haoqin Sun, Jiaming Zhou, Yong Qin
+
+## 🔍 Elderly Speech Analysis
 
 - [SeniorTalk: A Chinese Conversation Dataset with Rich Annotations for Super-Aged Seniors](https://arxiv.org/abs/2503.16578), *arXiv*, Yang Chen\*, **Hui Wang**\*, Shiyao Wang, Junyang Chen, Jiabei He, Jiaming Zhou, Xi Yang, Yequan Wang, Yonghua Lin, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk) [![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/BAAI/SeniorTalk)
+
+- [WildElder: A Chinese Elderly Speech Dataset from the Wild with Fine-Grained Manual Annotations](https://arxiv.org/abs/2503.16578), *arXiv*, **Hui Wang**\*, Jiaming Zhou\*, Jiabei He, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/WildElder) [![Hugging Face](https://huggingface.co/datasets/Hui519/WildElder)
 
 # 🎖 Honors and Awards
 - **2024** VoiceMOS 2024 Challenge First Place in Track 1; Two First Places and One Second Place in Track 3 🏆
