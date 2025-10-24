@@ -90,10 +90,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 # 📖 Educations
 - *2018.09 - 2022.06*, China University of Mining and Technology, XuZhou
 - *2022.09 - Present*, Nankai University, Tianjin
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
- -->
+
 
 # 💻 Internships
 - *2024.07 - 2025.07*, Microsoft Research Asia, Beijing. Co-supervised by [Dr. Shujie Liu](https://www.microsoft.com/en-us/research/people/shujliu/) and [Dr. Jinyu Li](https://www.microsoft.com/en-us/research/people/jinyli/)
