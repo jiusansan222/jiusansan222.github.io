@@ -68,7 +68,7 @@ If you are interested in academic collaboration or internship opportunities, ple
 
 - [MusicEval: A Generative Music Dataset with Expert Ratings for Automatic Text-to-Music Evaluation](https://arxiv.org/abs/2501.10811), *ICASSP 2025*, Cheng Liu\*, **Hui Wang**\*, Jinghua Zhao, Shiwan Zhao, Hui Bu, Xin Xu, Jiaming Zhou, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/MusicEval-baseline)[![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/BAAI/MusicEval)
 
-- [Towards Automatic Evaluation and High-Quality Pseudo-Parallel Dataset Construction for Audio Editing: A Human-in-the-Loop Method](https://arxiv.org/abs/2508.11966), Yuhang Jia\*, **Hui Wang**\*, Xin Nie, Yujie Guo, Lianru Gao, Yong Qin
+- [Towards Automatic Evaluation and High-Quality Pseudo-Parallel Dataset Construction for Audio Editing: A Human-in-the-Loop Method](https://arxiv.org/abs/2508.11966), Yuhang Jia\*, **Hui Wang**\*, Xin Nie, Yujie Guo, Lianru Gao, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/AuditEval)
 
 - [TTA-bench: A comprehensive benchmark for evaluating text-to-audio models](https://arxiv.org/abs/2508.11966), **Hui Wang**\*, Cheng Liu\*, Junyang Chen, Haoze Liu, Yuhang Jia, Shiwan Zhao, Jiaming Zhou, Haoqin Sun, Hui Bu, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk)[![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/Hui519/TTA-Bench)
 
