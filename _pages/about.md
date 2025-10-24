@@ -18,7 +18,6 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 My name is Hui Wang, and I am currently a fourth-year direct Ph.D. student at the College of Computer Science, Nankai University, specializing in Computer Science and Technology. I began my Ph.D. journey in 2022, joining the university's program under the supervision of Professor [Yong Qin](https://qinyong.vrdcc.com/teacher_qinyong/).
-.
 
 Currently, I am interning at Tencent Hunyuan, where I am gaining practical experience in my research area. My research focuses on speech synthesis, speech quality assessment, and related technologies, and I have been actively involved in various projects in this field.
 
