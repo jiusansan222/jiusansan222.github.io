@@ -41,7 +41,7 @@ If you are interested in academic collaboration or internship opportunities, ple
 </div>
 </div>
 
-- [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), *SPL*, **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
+- <div class="badge">Signal Process Letter</div> [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
 
 - [Towards Responsible Evaluation for Text-to-Speech](), Yifan Yang\*, **Hui Wang**\*, Bing Han, Shujie Liu, Jinyu Li, Yong Qin, Xie Chen
 ## 🎤 Speech & Audio & Music Quality Assessment
