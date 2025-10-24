@@ -19,14 +19,14 @@ redirect_from:
 
 My name is Hui Wang, and I am currently a third-year direct Ph.D. student at the College of Computer Science, Nankai University, specializing in Computer Science and Technology. 
 
-My research interests include speech synthesis and automatic speech quality assessment. 
-I am working under the supervision of Professor [Yong Qin](https://qinyong.vrdcc.com/teacher_qinyong/), and currently interning at Microsoft, where I am co-supervised by [Dr. Shujie Liu](https://www.microsoft.com/en-us/research/people/shujliu/) and [Dr. Jinyu Li](https://www.microsoft.com/en-us/research/people/jinyli/).
+My research interests include speech synthesis and automatic audio quality assessment. 
+I am working under the supervision of Professor [Yong Qin](https://qinyong.vrdcc.com/teacher_qinyong/), and currently interning at Tencent Hunyuan.
 
 I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I have been working on various research projects in the field of speech synthesis, speech quality assessment, and related technologies. If you are interested in academic collaboration or internship opportunities, please feel free to reach out to me via email
 
 
 # 🔥 News
-- *2025.10*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is accepted by NeurIPS 2025.
+- *2025.10*: &nbsp;🎉 We have released a series of evaluation models, including AuditEval, AudioEval, and SpeechEval.
 - *2025.09*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is accepted by NeurIPS 2025.
 
 # 📝 Publications 
@@ -45,14 +45,15 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 - [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), *SPL*, **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
 
+- [Towards Responsible Evaluation for Text-to-Speech](), Yifan Yang\*, **Hui Wang**\*, Bing Han, Shujie Liu, Jinyu Li, Yong Qin, Xie Chen
 ## 🎤 Speech & Audio & Music Quality Assessment
 
 <!-- 论文1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TASLP</div><img src='images/SpeechLLMasJudge.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/SpeechLLMasJudge.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
-[RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540) *IEEE TASLP*,
+[SpeechLLM-as-Judges: Towards General and Interpretable Speech Quality Evaluation](https://ieeexplore.ieee.org/abstract/document/10933540),
 
-**Hui Wang**, Shiwan Zhao, Xiguang Zheng, Jiaming Zhou, Xuechen Wang, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/RAMP_MOS)
+**Hui Wang**, Jinghua Zhao, Yifan Yang, Shujie Liu, Junyang Chen, Yanzhe Zhang, Shiwan Zhao, Jinyu Li, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/SpeechLLM-as-Judges)
 </div>
 </div>
 
@@ -76,6 +77,10 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 - [MusicEval: A Generative Music Dataset with Expert Ratings for Automatic Text-to-Music Evaluation](https://arxiv.org/abs/2501.10811), *ICASSP 2025*, Cheng Liu\*, **Hui Wang**\*, Jinghua Zhao, Shiwan Zhao, Hui Bu, Xin Xu, Jiaming Zhou, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/MusicEval-baseline)
 
+- [Towards Automatic Evaluation and High-Quality Pseudo-Parallel Dataset Construction for Audio Editing: A Human-in-the-Loop Method](https://arxiv.org/abs/2508.11966), Yuhang Jia\*, **Hui Wang**\*, Xin Nie, Yujie Guo, Lianru Gao, Yong Qin
+
+- [TTA-bench: A comprehensive benchmark for evaluating text-to-audio models](https://arxiv.org/abs/2508.11966), **Hui Wang**\*, Cheng Liu\*, Junyang Chen, Haoze Liu, Yuhang Jia, Shiwan Zhao, Jiaming Zhou, Haoqin Sun, Hui Bu, Yong Qin
+
 - [AudioEval: Automatic Dual-Perspective and Multi-Dimensional Evaluation of Text-to-Audio-Generation](https://arxiv.org/abs/2510.14570), **Hui Wang**, Jinghua Zhao, Cheng Liu, Yuhang Jia, Haoqin Sun, Jiaming Zhou, Yong Qin
 
 ## 🔍 Elderly Speech Analysis
@@ -98,4 +103,5 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
  -->
 
 # 💻 Internships
-- *2024.07 - 2025.07*, Microsoft Research Asia, Beijing.
+- *2024.07 - 2025.07*, Microsoft Research Asia, Beijing. Co-supervised by [Dr. Shujie Liu](https://www.microsoft.com/en-us/research/people/shujliu/) and [Dr. Jinyu Li](https://www.microsoft.com/en-us/research/people/jinyli/)
+- 2025.08 - Present, Tencent Hunyuan, Beijing.
