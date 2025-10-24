@@ -52,7 +52,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 <div class='paper-box-text' markdown="1">
 [SpeechLLM-as-Judges: Towards General and Interpretable Speech Quality Evaluation](https://ieeexplore.ieee.org/abstract/document/10933540),
 
-**Hui Wang**, Jinghua Zhao, Yifan Yang, Shujie Liu, Junyang Chen, Yanzhe Zhang, Shiwan Zhao, Jinyu Li, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/SpeechLLM-as-Judges)
+**Hui Wang**, Jinghua Zhao, Yifan Yang, Shujie Liu, Junyang Chen, Yanzhe Zhang, Shiwan Zhao, Jinyu Li, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/SpeechLLM-as-Judges)[![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/Hui519/SpeechEval)]
 </div>
 </div>
 
@@ -81,7 +81,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 - [SeniorTalk: A Chinese Conversation Dataset with Rich Annotations for Super-Aged Seniors](https://arxiv.org/abs/2503.16578), *arXiv*, Yang Chen\*, **Hui Wang**\*, Shiyao Wang, Junyang Chen, Jiabei He, Jiaming Zhou, Xi Yang, Yequan Wang, Yonghua Lin, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk) [![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/BAAI/SeniorTalk)
 
-- [WildElder: A Chinese Elderly Speech Dataset from the Wild with Fine-Grained Manual Annotations](https://arxiv.org/abs/2503.16578), *arXiv*, **Hui Wang**\*, Jiaming Zhou\*, Jiabei He, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/WildElder) [![Hugging Face](https://huggingface.co/datasets/Hui519/WildElder)]
+- [WildElder: A Chinese Elderly Speech Dataset from the Wild with Fine-Grained Manual Annotations](https://arxiv.org/abs/2503.16578), *arXiv*, **Hui Wang**\*, Jiaming Zhou\*, Jiabei He, Haoqin Sun, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/WildElder) [![Hugging Face](https://img.shields.io/badge/🤗-Hugging%20Face-blue)](https://huggingface.co/datasets/Hui519/WildElder)]
 
 # 🎖 Honors and Awards
 - **2024** VoiceMOS 2024 Challenge First Place in Track 1; Two First Places and One Second Place in Track 3 🏆
