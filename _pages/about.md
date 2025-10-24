@@ -77,7 +77,7 @@ If you are interested in academic collaboration or internship opportunities, ple
 
 - <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">Interspeech 2023</span> [RAMP: Retrieval-Augmented MOS Prediction via Confidence-based Dynamic Weighting](https://arxiv.org/abs/2308.16488), **Hui Wang**, Shiwan Zhao, Xiguang Zheng, Yong Qin
 
-- <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">ICME 2023</span> [Intermediate-Task Learning with Pretrained Model for Synthesized Speech MOS Prediction](https://ieeexplore.ieee.org/abstract/document/10219692), **, **Hui Wang**, Xiguang Zheng, Yong Qin
+- <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">ICME 2023</span> [Intermediate-Task Learning with Pretrained Model for Synthesized Speech MOS Prediction](https://ieeexplore.ieee.org/abstract/document/10219692), **Hui Wang**, Xiguang Zheng, Yong Qin
 
 ## 🔍 Elderly Speech Analysis
 
