@@ -19,7 +19,6 @@ redirect_from:
 
 My name is Hui Wang, and I am currently a third-year direct Ph.D. student at the College of Computer Science, Nankai University, specializing in Computer Science and Technology. 
 
-My research interests include speech synthesis and automatic audio quality assessment. 
 I am working under the supervision of Professor [Yong Qin](https://qinyong.vrdcc.com/teacher_qinyong/), and currently interning at Tencent Hunyuan.
 
 I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I have been working on various research projects in the field of speech synthesis, speech quality assessment, and related technologies. If you are interested in academic collaboration or internship opportunities, please feel free to reach out to me via email
@@ -49,7 +48,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 ## 🎤 Speech & Audio & Music Quality Assessment
 
 <!-- 论文1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/SpeechLLMasJudge.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/SpeechLLMasJudge.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [SpeechLLM-as-Judges: Towards General and Interpretable Speech Quality Evaluation](https://ieeexplore.ieee.org/abstract/document/10933540),
 
@@ -58,11 +57,8 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 </div>
 
 
-[RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540) *IEEE TASLP*,
+- [RAMP+: Retrieval-Augmented MOS Prediction With Prior Knowledge Integration](https://ieeexplore.ieee.org/abstract/document/10933540) *IEEE TASLP*,**Hui Wang**, Shiwan Zhao, Xiguang Zheng, Jiaming Zhou, Xuechen Wang, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/RAMP_MOS)
 
-**Hui Wang**, Shiwan Zhao, Xiguang Zheng, Jiaming Zhou, Xuechen Wang, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/NKU-HLT/RAMP_MOS)
-</div>
-</div>
 
 <!-- 论文2 -->
 - [RAMP: Retrieval-Augmented MOS Prediction via Confidence-based Dynamic Weighting](https://arxiv.org/abs/2308.16488), *Interspeech 2023*,
@@ -79,7 +75,7 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 
 - [Towards Automatic Evaluation and High-Quality Pseudo-Parallel Dataset Construction for Audio Editing: A Human-in-the-Loop Method](https://arxiv.org/abs/2508.11966), Yuhang Jia\*, **Hui Wang**\*, Xin Nie, Yujie Guo, Lianru Gao, Yong Qin
 
-- [TTA-bench: A comprehensive benchmark for evaluating text-to-audio models](https://arxiv.org/abs/2508.11966), **Hui Wang**\*, Cheng Liu\*, Junyang Chen, Haoze Liu, Yuhang Jia, Shiwan Zhao, Jiaming Zhou, Haoqin Sun, Hui Bu, Yong Qin
+- [TTA-bench: A comprehensive benchmark for evaluating text-to-audio models](https://arxiv.org/abs/2508.11966), **Hui Wang**\*, Cheng Liu\*, Junyang Chen, Haoze Liu, Yuhang Jia, Shiwan Zhao, Jiaming Zhou, Haoqin Sun, Hui Bu, Yong Qin [![GitHub](https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=black)](https://github.com/flageval-baai/SeniorTalk)[![Hugging Face](https://huggingface.co/datasets/Hui519/TTA-Bench)
 
 - [AudioEval: Automatic Dual-Perspective and Multi-Dimensional Evaluation of Text-to-Audio-Generation](https://arxiv.org/abs/2510.14570), **Hui Wang**, Jinghua Zhao, Cheng Liu, Yuhang Jia, Haoqin Sun, Jiaming Zhou, Yong Qin
 
