@@ -63,8 +63,6 @@ I joined Nankai University in 2022 as a direct Ph.D. student, and since then, I 
 <!-- 论文2 -->
 - [RAMP: Retrieval-Augmented MOS Prediction via Confidence-based Dynamic Weighting](https://arxiv.org/abs/2308.16488), *Interspeech 2023*,
 **Hui Wang**, Shiwan Zhao, Xiguang Zheng, Yong Qin
-</div>
-</div>
 
 <!-- 论文3 -->
 - [Uncertainty-Aware Mean Opinion Score Prediction](https://arxiv.org/abs/2408.12829), *Interspeech 2024*, **Hui Wang**, Shiwan Zhao, Jiaming Zhou, Xiguang Zheng, Haoqin Sun, Xuechen Wang, Yong Qin 
