@@ -24,6 +24,8 @@ Currently, I am interning at Tencent Hunyuan, where I am gaining practical exper
 If you are interested in academic collaboration or internship opportunities, please feel free to reach out to me via email.
 
 # 🔥 News
+- *2026.04.*: &nbsp;🎉 Our 5 papers have been accepted to ACL 2026.
+- *2025.11*: &nbsp;🎉 Our 2 papers have been accepted to AAAI 2026.
 - *2025.10*: &nbsp;🎉 We have released a series of evaluation models, including AuditEval, AudioEval, and SpeechEval.
 - *2025.09*: &nbsp;🎉 Our Elderly Conversation Dataset *SeniorTalk* is accepted by NeurIPS 2025.
 
@@ -47,7 +49,7 @@ If you are interested in academic collaboration or internship opportunities, ple
 ## 🎤 Speech & Audio & Music Quality Assessment
 
 <!-- 论文1 -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Arxiv</div><img src='images/SpeechLLMasJudge.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ACL 2026 Main</div><img src='images/SpeechLLMasJudge.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 [SpeechLLM-as-Judges: Towards General and Interpretable Speech Quality Evaluation](https://ieeexplore.ieee.org/abstract/document/10933540),
 
