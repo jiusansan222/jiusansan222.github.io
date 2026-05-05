@@ -24,6 +24,7 @@ Currently, I am interning at Tencent Hunyuan, where I am gaining practical exper
 If you are interested in academic collaboration or internship opportunities, please feel free to reach out to me via email.
 
 # 🔥 News
+- *2026.05.*: &nbsp;🎉 Our paper *Towards Responsible Evaluation for Text-to-Speech* has been accepted to ICML 2026.
 - *2026.04.*: &nbsp;🎉 Our 5 papers have been accepted to ACL 2026.
 - *2025.11*: &nbsp;🎉 Our 2 papers have been accepted to AAAI 2026.
 - *2025.10*: &nbsp;🎉 We have released a series of evaluation models, including AuditEval, AudioEval, and SpeechEval.
@@ -45,7 +46,7 @@ If you are interested in academic collaboration or internship opportunities, ple
 
 - <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">Signal Process Letter</span> [StreamMel: Real-Time Zero-shot Text-to-Speech via Interleaved Continuous Autoregressive Modeling](https://arxiv.org/abs/2506.12570), **Hui Wang**, Yifan Yang, Shujie Liu, Jinyu Li, Lingwei Meng, Yanqing Liu, Jiaming Zhou, Haoqin Sun, Yan Lu, Yong Qin
 
-- <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">Arxiv</span> [Towards Responsible Evaluation for Text-to-Speech](https://arxiv.org/pdf/2510.06927), Yifan Yang\*, **Hui Wang**\*, Bing Han, Shujie Liu, Jinyu Li, Yong Qin, Xie Chen
+- <span style="display:inline-block; background-color:#00369F; color:#fff; padding:0px 7px; margin-right:5px; font-size:13px;">ICML 2026</span> [Towards Responsible Evaluation for Text-to-Speech](https://arxiv.org/pdf/2510.06927), Yifan Yang\*, **Hui Wang**\*, Bing Han, Shujie Liu, Jinyu Li, Yong Qin, Xie Chen
 ## 🎤 Speech & Audio & Music Quality Assessment
 
 <!-- 论文1 -->
